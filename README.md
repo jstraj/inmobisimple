@@ -1,6 +1,6 @@
 # inmobisimple
 
-A python wrapper for Inmobi Publisher Reporting API. 
+An unofficial python wrapper for Inmobi Publisher Reporting API. 
 The API documentation can be found at https://support.inmobi.com/monetize/reporting-api/. 
 
 ## Getting Started
@@ -33,6 +33,7 @@ from inmobisimple.inmobi import InmobiAuth
 
 auth = InmobiAuth(username="rajat.panwar@example.com", secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 auth_session = auth.generate_session()
+
 print(auth_session.account_id)
 '4028cb************************14'
 print(auth_session.session_id)
@@ -101,6 +102,7 @@ You can always reconstruct the Auth object from session_id, account_id, secret_k
 
 ```python
 from inmobisimple.models import Auth
+
 auth = Auth(
         session_id="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         account_id="yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
@@ -123,6 +125,7 @@ from inmobisimple.inmobi import InmobiAuth, Inmobi
 auth = InmobiAuth(username="rajat.panwar@example.com", 
                 secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
                 version='1.0')
+
 # Default API Reporting version is 3.0
 inmobi = Inmobi(auth, version='3.0')
 ```
@@ -149,7 +152,7 @@ Check examples/ directory
 
 ## Contributing
 
-Codes can never be perfect. Please feel free to submit pull requests if you think there are some bugs or the code needs some kind of improvement.
+Codes can never be perfect. Please feel free to notify me or submit pull requests if you think there are some bugs or the code needs some kind of improvement.
 
 ## License
 
