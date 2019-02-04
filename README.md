@@ -30,19 +30,17 @@ First, import the inmobisimple package and create an InmobiAuth object to genera
 
 ```python
 from inmobisimple.inmobi import InmobiAuth
+
 auth = InmobiAuth(username="rajat.panwar@example.com", secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 auth_session = auth.generate_session()
-print(auth_session)
-
-{
-'respList': [{
-'sessionId': 'b8************************d31942',
-'accountId': '4028cb************************14',
-'subAccounts': None
-}],
-'error': False,
-'errorList': []
-}
+print(auth_session.account_id)
+'4028cb************************14'
+print(auth_session.session_id)
+'b8************************d31942'
+print(auth_session.username)
+'rajat.panwar@example.com'
+print(auth_session.secret_key)
+'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 ```
 
 Now you have to save this session somewhere so that you can reuse it later. As per the documentation,
@@ -70,8 +68,8 @@ report = inmobi.create_report(payload)
 
 while report.has_next_page():
         # length param is optional. Default is 5000
-        response = report.get_next_page(length=100) 
-
+        response = report.get_next_page(length=100)
+        print(response)
 ```
 
 The length parameter is optional. Default value is 5000.
@@ -147,7 +145,7 @@ payload = {
 
 #### More...
 
-Check examples/
+Check examples/ directory
 
 ## Contributing
 
