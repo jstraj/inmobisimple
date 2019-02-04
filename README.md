@@ -8,7 +8,7 @@ The API documentation can be found at https://support.inmobi.com/monetize/report
 
 ### Installation
 
-inmobisimple is available on the Python Package Index (PyPI) at xxx.com
+inmobisimple is available on the Python Package Index (PyPI) at https://pypi.org/project/inmobisimple/0.1/
 
 ```
 pip install inmobisimple
